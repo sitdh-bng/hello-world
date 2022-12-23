@@ -1,11 +1,14 @@
 # JWT Demo
 
 ## Start server
-```
-$ docker compose up
-```
 
-## Endpoint
+1. Copy `env.sample` to `.env`
+1. Change the value of `SECRET_KEY` to any random string which 256 bit size (32 characters at least)
+1. Run `$ docker compose up` at your terminal
+1. Access this API by `localhost:9000/<endpoint>`
+1. Pull requests always open :)
+
+## Endpoints
 | Endpoint | Method | Description |
 | :--      | :---:  | :---        |
 | `/`      | `ANY`  | healthcheck endpoint |
