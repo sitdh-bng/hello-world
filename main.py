@@ -17,7 +17,7 @@ def home():
         201
     )
 
-@app.route('/api/v0/goods/return', methods=['POST'])
+@app.route('/returngoods', methods=['POST'])
 def return_goods():
 
     token = request.headers.get('Authorization').split(' ').pop()
