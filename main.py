@@ -19,8 +19,6 @@ def home():
 
 @app.route('/returngoods', methods=['POST'])
 def return_goods():
-
-    token = request.headers.get('Authorization').split(' ').pop()
     payload = {}
 
     response_code = UNAUTHORIZED_CODE
@@ -30,6 +28,8 @@ def return_goods():
     }
 
     try:
+        token = request.headers.get('Authorization').split(' ').pop()
+        
         payload = jwt.decode(
             token, 
             os.environ.get('SECRET_KEY', 'super-secret-token'),
