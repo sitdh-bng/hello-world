@@ -12,7 +12,7 @@ SUCCESS_WITH_UPDATE = 201
 def home():
     return make_response(
         jsonify({
-            'ping': 'poing',
+            'ping': 'pong',
         }),
         201
     )
